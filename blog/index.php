@@ -1,17 +1,19 @@
 <?php
 
-$from = "de--repente.tumblr.com";
-$unto = "timfahrenreich.com/tumble";
-
 $dir = 'posts';
-$html = scandir($dir, 1);
+$posts = scandir($dir);
 
-foreach ($html as $key => $value) {
-	if ($value = '.') {
-		echo "ak";
-	}else{
-		print($value.'<br>');		
-	}
-};
+if ($_GET['post']){
+		$post = $_GET['post'];
+		echo($post);
+}else{
+	foreach ($posts as $key => $value) {
+		if ($value == '.' || $value == '..' || $value == 'index.php') {
+			unset($posts[$key]);
+		}else{
+			print('<a href="/blog/?post='.$value.'">'.$key.'</a><br>');		
+		}
+	};
+}
 
 ?>
