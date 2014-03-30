@@ -1,6 +1,2 @@
 <?php
-
-$post = $_GET['post'];
-
-echo($post);
-?>
+header("Location: ../");

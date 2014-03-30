@@ -1,19 +1,24 @@
 <?php
+require_once('../libs/setup.php');
 
-$dir = 'posts';
-$posts = scandir($dir);
-
-if ($_GET['post']){
-		$post = $_GET['post'];
-		echo($post);
+if (isset($_GET['post'])){
+    $post = $_GET['post'];
+    $html = 'posts/'.$post;
 }else{
-	foreach ($posts as $key => $value) {
-		if ($value == '.' || $value == '..' || $value == 'index.php') {
+    $html = './blog/index.tpl';
+    $dir = 'posts';
+    $posts = scandir($dir);
+	foreach ($posts as $key => $value){
+		if ($value == '.' || $value == '..' || $value == 'index.php'|| $value == 'img'){
 			unset($posts[$key]);
-		}else{
-			print('<a href="/blog/?post='.$value.'">'.$key.'</a><br>');		
 		}
 	};
+    $smarty->assign('posts' , $posts);
 }
+$page = array(
+    "content" => $smarty->fetch($html),
+    "js" => null,
+    "css" => null,
+);
+$smarty->run($page);
 
-?>
