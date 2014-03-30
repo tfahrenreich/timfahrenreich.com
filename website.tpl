@@ -1,4 +1,4 @@
 <html>
-    <h1>template web</h1>
+    <h5>template web</h5>
     {$page.content|default:''}
 </html>

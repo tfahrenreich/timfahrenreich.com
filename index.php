@@ -1,3 +1,8 @@
 <?php
+include_once('libs/setup.php');
 
-echo "<h1>tf.com";
+$page = array(
+    'content' => $smarty->fetch('home.tpl')
+);
+
+$smarty->run($page);
