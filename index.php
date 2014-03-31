@@ -5,4 +5,4 @@ $page = array(
     'content' => $smarty->fetch('home.tpl')
 );
 
-$smarty->run($page);
+$smarty->run($page, false);
