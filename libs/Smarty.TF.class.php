@@ -1,19 +1,19 @@
 <?php
 class customSmarty extends Smarty{
-    function run($page, $mtl = null){
-        //global template
-        //$globalTemplate = file_get_contents('../website.tpl');
-        $globalTemplate = 'website.tpl';
+    function run($page, $v = 1){
+        $globalTemplate = array(
+            0 => 'blank.tpl',  // DEFAULT
+            1 => 'website.tpl',  // DEFAULT
+        );
         $page404 = '../404.shtml';
-        if ($mtl === true|$mtl === null){
+        if ($v <= 1){
             if ($page['content'] == true){
                 $this->assign('page', $page);
-                $this->display($globalTemplate);
+                $this->display($globalTemplate[$v]);
             }else{
                 $this->display($page404);
             }
-        }elseif($mtl===false){
-            //$this->display($page['content']);
+        }elseif($v === 0){
             echo($page['content']);
         }else{
             echo "whoops";

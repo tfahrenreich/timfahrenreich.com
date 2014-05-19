@@ -3,7 +3,7 @@
 
 </head>
 <body>
-    <h5>template web</h5>
+    <h5>hello</h5>
     {$page.content|default:''}
 </body>
 </html>

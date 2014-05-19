@@ -16,9 +16,11 @@ if (isset($_GET['post'])){
     $smarty->assign('posts' , $posts);
 }
 $page = array(
+    "title" => "blog home",
+    "type" => "blog",
     "content" => $smarty->fetch($html),
     "js" => null,
-    "css" => null,
+    "css" => null
 );
 $smarty->run($page);
 
