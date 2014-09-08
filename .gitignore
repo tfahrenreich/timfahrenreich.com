@@ -4,3 +4,5 @@
 /.idea/*
 debug.log
 /templates_c/
+includes/css/styles.less.css
+includes/css/styles.less.cache
