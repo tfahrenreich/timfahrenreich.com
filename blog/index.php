@@ -5,7 +5,7 @@ if (isset($_GET['post'])){
     $post = $_GET['post'];
     $html = 'posts/'.$post;
 }else{
-    $html = './blog/index.tpl';
+    $html = $path.'/templates/blog/index.tpl';
     $dir = 'posts';
     $posts = scandir($dir);
 	foreach ($posts as $key => $value){

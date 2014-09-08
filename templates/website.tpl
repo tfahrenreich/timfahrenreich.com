@@ -21,5 +21,6 @@ MM    MM 8M   MM   MM    MM   MM    YM.    ,  MM    MM   MM    YM.    ,  MM YM. 
 </head>
 <body>
     {$page.content|default:''}
+    {include file='partials/third-party-scripts.tpl'}
 </body>
 </html>

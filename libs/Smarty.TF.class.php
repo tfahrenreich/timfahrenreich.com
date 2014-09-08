@@ -2,10 +2,10 @@
 class customSmarty extends Smarty{
     function run($page, $v = 1){
         $globalTemplate = array(
-            0 => 'blank.tpl',  // DEFAULT
+            0 => 'blank.tpl',
             1 => 'website.tpl',  // DEFAULT
         );
-        $page404 = '../404.shtml';
+        $page404 = '404.shtml';
         if ($v <= 1){
             if ($page['content'] == true){
                 $this->assign('page', $page);
