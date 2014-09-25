@@ -1,5 +1,5 @@
 <?php
-include_once('../libs/setup.php');
+require_once('../libs/setup.php');
 
 $dir = '.';
 $experiments = scandir($dir);
