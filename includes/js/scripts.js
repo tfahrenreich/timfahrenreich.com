@@ -3,7 +3,6 @@ $(function(){
         name : 'Tfahrenreich',
         version : '1.0',
         init : function(){
-            this.openingAnimation();
             this.windowResize.init();
             this.onScroll.init();
         },
@@ -32,7 +31,7 @@ $(function(){
                 var $target = $('section');
                 if($target.length > 0){
                     var $windowHeight = Tfahrenreich.helpers.getHeight();
-                    console.log($windowHeight);
+                    //console.log($windowHeight);
                     $target.css('min-height', $windowHeight+'px');
                 }
             }
@@ -55,9 +54,6 @@ $(function(){
                     $(this).css('background', "#"+randomColor);
                 })
             }
-        },
-        openingAnimation : function(){
-            console.log("sd");
         }
     };
 });

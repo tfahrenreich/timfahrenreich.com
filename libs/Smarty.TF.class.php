@@ -2,7 +2,6 @@
 class customSmarty extends Smarty{
     function run($page, $v = 1){
         $globalTemplate = array(
-            0 => 'blank.tpl',
             1 => 'website.tpl',  // DEFAULT
         );
         $page404 = '404.shtml';

@@ -1,20 +1,4 @@
 <section data-resize>
-    hello
+    <h1>Tim Fahrenreich</h1>
+    <p>Forever busy, something coming soon.</p>
 </section>
-<section data-resize>
-    hello
-</section>
-<section data-resize>
-    hello
-</section>
-<section data-resize>
-    hello
-</section>
-<section data-resize>
-    hello
-</section>
-<section data-resize>
-    hello
-</section>
-
-hello
