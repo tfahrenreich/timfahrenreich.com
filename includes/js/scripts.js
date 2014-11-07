@@ -61,20 +61,3 @@ $(function(){
 $(document).ready(function(){
     Tfahrenreich.init()
 });
-
-
-/*
-var header_helpers = function(class_array){
-    var i  = class_array.length;
-    while(i--){
-        console.log(class_array[i])
-    }
-};
-header_helpers([
-    'foundation-mq-small',
-    'foundation-mq-medium',
-    'foundation-mq-large',
-    'foundation-mq-xlarge',
-    'foundation-mq-xxlarge',
-    'foundation-data-attribute-namespace']);
-*/
