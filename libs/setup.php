@@ -11,8 +11,8 @@ require_once('Smarty-3.1.17/libs/Smarty.class.php');
 require_once('Smarty.TF.class.php');
 $smarty = New customSmarty();
 $smarty->setTemplateDir($path.'/templates')
-    ->setCompileDir('../templates_c')
-    ->setCacheDir('../cache')
+    ->setCompileDir($path.'/templates/templates_c')
+    ->setCacheDir($path.'/templates/cache')
     ->force_compile = true;
 
 $smarty->caching = 0;
