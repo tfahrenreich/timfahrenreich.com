@@ -55,13 +55,10 @@ $(function(){
                 })
             },
             addPizza : function(){
-                var i = Tfahrenreich._data.pizzaCount;
-                i++;
-                Tfahrenreich._data.pizzaCount = i;
-
+                Tfahrenreich._data.pizzaCount++;
                 var x = Math.floor(Math.random() * Tfahrenreich.helpers.getWidth());
                 var y = Math.floor(Math.random() * Tfahrenreich.helpers.getHeight());
-                console.log('x:'+x+'y:'+y);
+                console.log('x:'+x+'y:'+y+' pizzacount:'+Tfahrenreich._data.pizzaCount);
                 $('body').append("<img src='http://a.deviantart.net/avatars/p/i/pizza-in-flames.gif?1' style='position: fixed; top:" + y + "px;left:"+ x +"px;'>");
             }
         },
