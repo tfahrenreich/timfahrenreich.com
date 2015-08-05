@@ -53,7 +53,20 @@ $(function(){
                     var randomColor = Math.floor(Math.random()*16777215).toString(16);
                     $(this).css('background', "#"+randomColor);
                 })
+            },
+            addPizza : function(){
+                var i = Tfahrenreich._data.pizzaCount;
+                i++;
+                Tfahrenreich._data.pizzaCount = i;
+
+                var x = Math.floor(Math.random() * Tfahrenreich.helpers.getWidth());
+                var y = Math.floor(Math.random() * Tfahrenreich.helpers.getHeight());
+                console.log('x:'+x+'y:'+y);
+                $('body').append("<img src='http://a.deviantart.net/avatars/p/i/pizza-in-flames.gif?1' style='position: fixed; top:" + y + "px;left:"+ x +"px;'>");
             }
+        },
+        _data:{
+            pizzaCount: 0
         }
     };
 });
