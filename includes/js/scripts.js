@@ -81,12 +81,17 @@ $(document).ready(function(){
 
 $(function(){
     function letterAnimation(letter){
-        var animationTime = (Math.round(Math.random()*5 * 10)/10);
-        console.log(letter);
-        $(letter).css({ 'transition' : animationTime+'s ease color'});
+        var animationTime = (Math.round((Math.random() * (7 - 3) + 3)*10)/10);
+        $(letter).css('transition', animationTime+'s ease color');
+        setTimeout(function(){
+            $(letter).css('color','#24B5B5')
+
+        },0);
         setInterval(function(){
-            $(letter).css('color', '#'+Math.floor(Math.random()*16777215).toString(16));
-        }, 2000)
+            var colors = ['#356565', '#006A80', '#2C5D5D' , '#47C3C3', '#16AF98', '#0EA58E', '#3EBFAC' , '#24B5B5', '#71B09F' ];
+            var color = Math.round(Math.random() * (9 - 1) + 1);
+            $(letter).css('color', colors[color])
+        }, 3000)
     }
 
     $('.letter-container').each(function(){
