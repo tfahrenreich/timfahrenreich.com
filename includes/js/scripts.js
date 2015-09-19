@@ -83,7 +83,7 @@ $(function(){
     function letterAnimation(letter){
         var animationTime = (Math.round(Math.random()*5 * 10)/10);
         console.log(letter);
-        $(letter).css({ 'transition' : animationTime+'s ease'});
+        $(letter).css({ 'transition' : animationTime+'s ease color'});
         setInterval(function(){
             $(letter).css('color', '#'+Math.floor(Math.random()*16777215).toString(16));
         }, 2000)
