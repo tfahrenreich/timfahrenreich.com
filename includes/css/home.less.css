@@ -1,1 +1,1 @@
-html.home body p{position:absolute;top:40%;padding:10px;}
+html.home body #home-slide h1{position:absolute;display:block;margin:0;width:100%;text-align:center;text-transform:uppercase;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;}html.home body #home-slide h1 small{display:block;}html.home body #home-slide h1 .black-text{color:red;}html.home body p{position:absolute;top:40%;padding:10px;}
