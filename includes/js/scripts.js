@@ -80,20 +80,14 @@ $(document).ready(function(){
 });
 
 $(function(){
-    function letterAnimation(letter){
-        var animationTime = (Math.round((Math.random() * (7 - 3) + 3)*10)/10);
-        $(letter).css('transition', animationTime+'s ease color');
-        setTimeout(function(){
-            $(letter).css('color','#24B5B5')
-
-        },0);
-        setInterval(function(){
-            var colors = ['#356565', '#006A80', '#2C5D5D' , '#47C3C3', '#16AF98', '#0EA58E', '#3EBFAC' , '#24B5B5', '#71B09F' ];
-            var color = Math.round(Math.random() * (9 - 1) + 1);
-            $(letter).css('color', colors[color])
-        }, 3000)
-    }
-
+    var colors = ['#356565', '#006A80', '#2C5D5D' , '#47C3C3', '#16AF98', '#0EA58E', '#3EBFAC' , '#24B5B5', '#71B09F' ];
+    var letters = [];
+    var randomColor = function(){
+        return colors[Math.round(Math.random() * (9-1) + 1)];
+    };
+    var animationTime = function(){
+        return (Math.round((Math.random() * (7 - 3) + 3)*10)/10);
+    };
     $('.letter-container').each(function(){
         var chars = $(this).text().split('');
         var $thisContainer = $(this);
@@ -101,8 +95,35 @@ $(function(){
         $.each(chars,function(i,l){
             var appendix = $('<span>'+l+'</span>');
             $thisContainer.append(appendix);
-            letterAnimation(appendix);
+            letters.push(appendix);
         });
     });
+    $('#home-slide').css('border','7px solid #FFFFFF');
+    setTimeout(function(){
+        $.each(letters, function(i,l){
+            $(l).css({
+                'color'                 : '#24B5B5' ,
+                'transition'            : animationTime() + 's ease color',
+                '-moz-transition'       : animationTime() + 's ease color',
+                '-webkit-transition'    : animationTime() + 's ease color'
+            });
+        })
+    }, 0);
+    setInterval(function(){
+        $('#home-slide').css({
+            'border-top-color'      : randomColor(),
+            'border-bottom-color'   : randomColor(),
+            'border-left-color'     : randomColor(),
+            'border-right-color'    : randomColor()
+        });
 
+        $.each(letters, function(i,l){
+            $(l).css({
+                'color'                 : randomColor(),
+                'transition'            : animationTime() + 's ease color',
+                '-moz-transition'       : animationTime() + 's ease color',
+                '-webkit-transition'    : animationTime() + 's ease color'
+            });
+        })
+    }, 4000);
 });
