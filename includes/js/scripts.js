@@ -33,10 +33,10 @@
             },
             minHeight: function () {
                 /**Sets <sections>'s min-height to viewport height for full frame sections*/
-                var $target = $('section');
+                var $target = $('section[data-resize]');
                 if ($target.length > 0) {
-                    var $windowHeight = _T.helpers.getHeight();
-                    //console.log($windowHeight);
+                    var $windowHeight = _T.helpers.getHeight()-20;
+                    _T._data.windowHeight = $windowHeight;
                     $target.css('min-height', $windowHeight + 'px');
                 }
             }
@@ -80,59 +80,62 @@
 }();
 !function () {
     Tfahrenreich.init();
-
-    var letters = [], randomColor, animationTime;
-    randomColor = function () {
-        var colors = ['#356565', '#006A80', '#2C5D5D', '#47C3C3', '#16AF98', '#0EA58E', '#3EBFAC', '#24B5B5', '#71B09F'];
-        return colors[Math.round(Math.random() * (9 - 1) + 1)];
-    };
-    animationTime = function () {
-        return Math.round((Math.random() * (7 - 3) + 3) * 10) / 10+ 's ease color';
-    };
-
-    $('.letter-container').each(function () {
-        var chars = $(this).text().split('');
-        var $thisContainer = $(this);
-        $thisContainer.empty();
-        $.each(chars, function (i, l) {
-            var appendix = $('<span>' + l + '</span>');
-            $thisContainer.append(appendix);
-            letters.push(appendix);
-        });
-    });
-    $('#home-slide').css('border', '7px solid #FFFFFF');
-    setTimeout(function () {
-        $.each(letters, function (i, l) {
-            $(l).css({
-                'transition': animationTime,
-                '-moz-transition': animationTime,
-                '-webkit-transition': animationTime,
-                'color': '#24B5B5'
+    !function(h,f,b){
+        f.css('height',h+20);
+        f.slideDown(1000,function(){
+            b.animate({'padding': '10px'}, 1000,function(){
+                f.css({'height':'', 'min-height' : h}).attr('data-resize','');
+                $('section').slideDown()
             });
-        })
-    }, 0);
-    !function animationLoop(i) {
-        setTimeout(function () {
-            _T._data.loopIteration = i;
-            $('#home-slide').css({
-                'border-top-color': randomColor,
-                'border-bottom-color': randomColor,
-                'border-left-color': randomColor,
-                'border-right-color': randomColor
-            });
+            f.animate({'height':h}, 1000);
 
-            $.each(letters, function (i, l) {
-                $(l).css({
-                    'color': randomColor,
-                    'transition': animationTime,
-                    '-moz-transition': animationTime,
-                    '-webkit-transition': animationTime
+            var letters = [], randomColor, animationTime;
+            randomColor = function () {
+                var colors = ['#356565', '#006A80', '#2C5D5D', '#47C3C3', '#16AF98', '#0EA58E', '#3EBFAC', '#24B5B5', '#71B09F'];
+                return colors[Math.round(Math.random() * (9 - 1) + 1)];
+            };
+            animationTime = function () {
+                return Math.round((Math.random() * (6 - 3) + 3) * 10) / 10+ 's ease color';
+            };
+
+            $('.letter-container').each(function () {
+                var chars = $(this).text().split('');
+                var $thisContainer = $(this);
+                $thisContainer.empty();
+                $.each(chars, function (i, l) {
+                    var appendix = $('<span>' + l + '</span>');
+                    $thisContainer.append(appendix);
+                    letters.push(appendix);
                 });
             });
-            i++;
-            animationLoop(i)
-        }, 4000);
-    }(0);
+
+            setTimeout(function () {
+                $.each(letters, function (i, l) {
+                    $(l).css({
+                        'transition': animationTime,
+                        '-moz-transition': animationTime,
+                        '-webkit-transition': animationTime,
+                        'color': '#24B5B5'
+                    });
+                })
+            }, 0);
+            !function animationLoop(i) {
+                setTimeout(function () {
+                    _T._data.loopIteration = i;
+                    $.each(letters, function (i, l) {
+                        $(l).css({
+                            'color': randomColor,
+                            'transition': animationTime,
+                            '-moz-transition': animationTime,
+                            '-webkit-transition': animationTime
+                        });
+                    });
+                    i++;
+                    animationLoop(i)
+                }, 3000);
+            }(0);
+        });
+    }(_T._data.windowHeight, $('#home-slide'), $('body'));
 }();
 
 

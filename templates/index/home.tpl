@@ -1,6 +1,10 @@
-<section id="home-slide" data-resize>
+<section id="home-slide">
     <h1>
-        <span class="letter-container">Tim Fahrenreich</span>
+        <span class="letter-container">headerr</span>
         <small><span class="letter-container">SUB HEADER</span></small>
     </h1>
+</section>
+
+<section data-resize>
+    asd
 </section>
