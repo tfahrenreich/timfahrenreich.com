@@ -32,6 +32,7 @@ MM    MM 8M   MM   MM    MM   MM    YM.    ,  MM    MM   MM    YM.    ,  MM YM. 
     {/if}
 </head>
 <body>
+    {include file="partials/top-bar.tpl"}
     {$page.content|default:''}
     {include file='partials/third-party-scripts.tpl'}
     <script src="/includes/js/scripts.js"></script>

@@ -85,7 +85,8 @@
         f.slideDown(1000,function(){
             b.animate({'padding': '10px'}, 1000,function(){
                 f.css({'height':'', 'min-height' : h}).attr('data-resize','');
-                $('section').slideDown()
+                $('section').slideDown();
+                $('nav').slideDown();
             });
             f.animate({'height':h}, 1000);
 

@@ -15,4 +15,4 @@ $smarty->setTemplateDir($path.'/templates')
     ->setCacheDir($path.'/templates/cache')
     ->force_compile = true;
 
-$smarty->caching = 0;
+$smarty->caching = false;
