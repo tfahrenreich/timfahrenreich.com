@@ -56,9 +56,9 @@
             menu: function (n) {
                 n = $('nav');
                 if($('body').scrollTop()>(_T._data.windowHeight-n.outerHeight())){
-                    n.css('background', '#008080').addClass('full');
+                    n.css('background', '#008080')
                 }else{
-                    n.css('background', '').removeClass('full');
+                    n.css('background', '')
                 }
             },
             seizure: function () {
@@ -88,6 +88,7 @@
 }();
 !function () {
     Tfahrenreich.init();
+    //Intro Animation
     !function(h,f,b){
         f.css('height',h+20);
         f.slideDown(1000,function(){
@@ -126,7 +127,7 @@
                         '-webkit-transition': animationTime,
                         'color': '#24B5B5'
                     });
-                })
+                });
             }, 0);
             !function animationLoop(i) {
                 setTimeout(function () {
@@ -139,6 +140,9 @@
                             '-webkit-transition': animationTime
                         });
                     });
+                    if(i == 0){
+                        $('p').slideDown("slow");
+                    }
                     i++;
                     animationLoop(i)
                 }, 3000);
