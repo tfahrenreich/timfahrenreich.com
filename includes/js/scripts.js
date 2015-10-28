@@ -53,6 +53,14 @@
                 });
                 $(window).scroll();
             },
+            menu: function (n) {
+                n = $('nav');
+                if($('body').scrollTop()>(_T._data.windowHeight-n.outerHeight())){
+                    n.css('background', '#008080').addClass('full');
+                }else{
+                    n.css('background', '').removeClass('full');
+                }
+            },
             seizure: function () {
                 if (_T.options.seizure == true) {
                     $('section').each(function () {

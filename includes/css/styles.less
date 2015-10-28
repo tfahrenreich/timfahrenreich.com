@@ -14,9 +14,11 @@ nav{
   top: 0;
   left: 0;
   width: 100%;
-  //background: red;
+  border-left: 10px white solid;
+  border-right: 10px white solid;
   z-index: 1;
   padding: 20px 30px;
+  transition: border .3s ease;
   div.logo{
     font-weight: 800;
     font-size: 40px;
@@ -30,6 +32,10 @@ nav{
     float: right;
     height: 40px;
     width: 34px;
+  }
+  &.full{
+    border-left: 0 white solid;
+    border-right: 0 white solid;
   }
 }
 
