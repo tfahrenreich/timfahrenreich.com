@@ -1,0 +1,23 @@
+  [{
+    "projects": [
+      {
+        "name": "Luxury Link",
+        "templateUrl": "luxurylink"
+      },
+      {
+        "name": "LivnGiv",
+        "templateUrl": "luxurylink"
+      },
+      {
+        "name": "Glitterrings",
+        "templateUrl": "luxurylink"
+      },
+      {
+        "name": "Cant't Relate",
+        "templateUrl": "luxurylink"
+      }
+    ],
+    "experiments": [
+
+   ]
+  }]
