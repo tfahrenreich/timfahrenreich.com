@@ -2,11 +2,7 @@
     <h1>
         <span class="letter-container">Tim Fahrenreich</span>
         <small><span class="letter-container">Front End Developer + Designer</span></small>
-        <p>I’m a front end developer (with design experience) who lives and breathes JavaScript,
-            HTML and CSS. I create beautiful, simple and effective designs for web and mobile
-            applications from conception to production.
-            I work closely with back end developers, designers, copywriters, and product owners to
-            create elegant user experiences; I thrive on feedback, critique and iteration.</p>
+        <p>I am a place holder text thats holds text in place of text. Please hold!</p>
     </h1>
 </section>
 
@@ -14,5 +10,17 @@
     ss
 </section>
 <section data-resize id="third">
-    ss
+    <div id="project-viewer">
+
+    </div>
+    <h2>Past project</h2>
+    <ul class="project-list">
+        {foreach $work[0].projects as $proj}
+            <li>
+                <div class="inner">
+                    {include file='partials/project.tpl'}
+                </div>
+            </li>
+        {/foreach}
+    </ul>
 </section>

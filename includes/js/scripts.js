@@ -76,16 +76,17 @@
                     } else {
                         _T._data.pizzaCount++
                     }
+                    var animation = (_T._data.pizzaCount%2 === 0) ? 'floating' : 'scaling';
                     var x = Math.floor(Math.random() * _T.helpers.getWidth());
                     var y = Math.floor(Math.random() * _T.helpers.getHeight());
-                    $('body').append("<img src='http://a.deviantart.net/avatars/p/i/pizza-in-flames.gif?1' style='position: fixed; top:" + y + "px;left:" + x + "px;'>");
+                    $('body').append("<img src='http://a.deviantart.net/avatars/p/i/pizza-in-flames.gif?1' class='"+animation+"' style='position: fixed; top:" + y + "px;left:" + x + "px;'>");
                 }
-
             }
         },
         _data: {}
     };
 }();
+
 !function () {
     Tfahrenreich.init();
     //Intro Animation
@@ -94,8 +95,6 @@
         f.slideDown(1000,function(){
             b.animate({'padding': '10px'}, 1000,function(){
                 f.css({'height':'', 'min-height' : h}).attr('data-resize','');
-                $('section').slideDown();
-                $('nav').slideDown();
             });
             f.animate({'height':h}, 1000);
 
@@ -141,11 +140,13 @@
                         });
                     });
                     if(i == 0){
-                        $('p').slideDown("slow");
+                        $('section').slideDown();
+                        $('nav').slideDown();
+                        f.find('p').slideDown(1000);
                     }
                     i++;
                     animationLoop(i)
-                }, 3000);
+                }, 2000);
             }(0);
         });
     }(_T._data.windowHeight, $('#home-slide'), $('body'));
