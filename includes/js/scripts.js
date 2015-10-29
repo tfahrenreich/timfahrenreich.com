@@ -89,6 +89,7 @@
 
 !function () {
     Tfahrenreich.init();
+
     //Intro Animation
     !function(h,f,b){
         f.css('height',h+20);
@@ -150,6 +151,26 @@
             }(0);
         });
     }(_T._data.windowHeight, $('#home-slide'), $('body'));
+
+    //project display
+    !function(p){
+        $('ul.project-list li').on('click', function(){
+            p.animate({'left' : 0}, function(){
+                p.css('position' , 'static')
+            });
+            $.ajax({
+                url: "http://10.20.30.40/projects/?p=luxurylink",
+                dataType: "html",
+                success: function(data){
+                    $('#project-viewer-inner').html(data);
+                }
+            });
+        });
+        p.find('.back').on('click', function(){
+            p.css('position' , 'absolute');
+            p.animate({'left' : '105%'});
+        });
+    }($("#project-viewer"))
 }();
 
 

@@ -11,7 +11,8 @@
 </section>
 <section data-resize id="third">
     <div id="project-viewer">
-
+        <div class="back">< back to projects</div>
+        <div id="project-viewer-inner"></div>
     </div>
     <h2>Past project</h2>
     <ul class="project-list">
