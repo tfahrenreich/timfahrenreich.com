@@ -46,7 +46,7 @@ section{
 
 .floating{
   float: left;
-  -webkit-animation-name: Floatingx;
+  -webkit-animation-name: Floating;
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
@@ -59,16 +59,12 @@ section{
 
 }
 
-@-webkit-keyframes Floatingx{
-  from {-webkit-transform:translate(0, 0px);}
+@-webkit-keyframes Floating{
+  0% {-webkit-transform:translate(0, 0px);}
   65% {-webkit-transform:translate(0, 45px);}
-  to {-webkit-transform: translate(0, -0px);    }
-}
-
-@-moz-keyframes Floating{
-  from {-moz-transform:translate(0, 0px);}
-  65% {-moz-transform:translate(0, 45px);}
-  to {-moz-transform: translate(0, -0px);}
+  85% {-webkit-transform:translate(45px, 15px) rotate(190deg);}
+  95% {-webkit-transform:translate(0px, -80px);}
+  100% {-webkit-transform:translate(0px, 0px);}
 }
 
 
@@ -86,11 +82,10 @@ section{
 
 @-webkit-keyframes scalex{
   0% {-webkit-transform: scale(0.9);}
-  15% {-webkit-transform: scale(1.9);}
+
   35% {-webkit-transform: scale(4.9);}
-  65% {-webkit-transform: scale(.9); padding: 100%;}
-  75% {-webkit-transform: scale(3.9);}
-  100% {-webkit-transform: scale(1.9);}
+
+  100% {-webkit-transform: scale(.9);}
 }
 
 @-moz-keyframes scale{

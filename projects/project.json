@@ -6,15 +6,15 @@
       },
       {
         "name": "LivnGiv",
-        "templateUrl": "luxurylink"
+        "templateUrl": "livngiv"
       },
       {
         "name": "Glitterrings",
-        "templateUrl": "luxurylink"
+        "templateUrl": "glitterrings"
       },
       {
         "name": "Cant't Relate",
-        "templateUrl": "luxurylink"
+        "templateUrl": "cantrelate"
       }
     ],
     "experiments": [
