@@ -17,11 +17,7 @@
     <h2>Past project</h2>
     <ul class="project-list">
         {foreach $work[0].projects as $proj}
-            <li>
-                <div class="inner">
-                    {include file='partials/project.tpl'}
-                </div>
-            </li>
+            {include file='partials/project.tpl'}
         {/foreach}
     </ul>
 </section>

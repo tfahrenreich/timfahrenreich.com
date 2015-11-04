@@ -154,7 +154,8 @@
 
     //project display
     !function(p){
-        $('ul.project-list li').on('click', function(){
+        $('ul.project-list li a').on('click', function(e){
+            e.preventDefault();
             p.animate({'left' : 0}, function(){
                 p.css('position' , 'static')
             });
