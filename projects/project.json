@@ -5,6 +5,10 @@
         "templateUrl": "luxurylink"
       },
       {
+        "name": "HistoryNet",
+        "templateUrl": "historynet"
+      },
+      {
         "name": "LivnGiv",
         "templateUrl": "livngiv"
       },

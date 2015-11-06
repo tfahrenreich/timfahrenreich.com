@@ -14,10 +14,12 @@
         <div class="back">< back to projects</div>
         <div id="project-viewer-inner"></div>
     </div>
-    <h2>Past project</h2>
-    <ul class="project-list">
-        {foreach $work[0].projects as $proj}
-            {include file='partials/project.tpl'}
-        {/foreach}
-    </ul>
+    <div class="panel-display">
+        <h2>Past project</h2>
+        <ul class="project-list">
+            {foreach $work[0].projects as $proj}
+                {include file='partials/project.tpl'}
+            {/foreach}
+        </ul>
+    </div>
 </section>

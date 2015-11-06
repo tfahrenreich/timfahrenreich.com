@@ -153,25 +153,28 @@
     }(_T._data.windowHeight, $('#home-slide'), $('body'));
 
     //project display
-    !function(p){
-        $('ul.project-list li a').on('click', function(e){
-            e.preventDefault();
-            p.animate({'left' : 0}, function(){
-                p.css('position' , 'static')
-            });
-            $.ajax({
-                url: "http://10.20.30.40/projects/?p=luxurylink",
-                dataType: "html",
-                success: function(data){
-                    $('#project-viewer-inner').html(data);
-                }
-            });
+    window.projectDisplay = function(event,t){
+        console.log(t);
+        var p = $('#project-viewer');
+        var pd = $('#third').find('.panel-display');
+        event.preventDefault();
+        p.animate({'left' : 0}, function(){
+            p.css('position' , 'static');
+        });
+        pd.slideUp();
+        $.ajax({
+            url: "http://10.20.30.40/projects/?p="+t,
+            dataType: "html",
+            success: function(data){
+                $('#project-viewer-inner').html(data);
+            }
         });
         p.find('.back').on('click', function(){
             p.css('position' , 'absolute');
             p.animate({'left' : '105%'});
+            pd.slideDown();
         });
-    }($("#project-viewer"))
+    };
 }();
 
 
