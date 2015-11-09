@@ -158,7 +158,7 @@
         var p = $('#project-viewer');
         var pd = $('#third').find('.panel-display');
         event.preventDefault();
-        p.animate({'left' : 0}, function(){
+        p.animate({'left' : '0%'}, function(){
             p.css('position' , 'static');
         });
         pd.slideUp();
@@ -169,11 +169,13 @@
                 $('#project-viewer-inner').html(data);
             }
         });
-        p.find('.back').on('click', function(){
+        p.find('.back').bind('click', function(){
             p.css('position' , 'absolute');
             p.animate({'left' : '105%'});
             pd.slideDown();
+            $(this).unbind();
         });
+        $('html, body').animate({scrollTop: p.offset().top-80},500);
     };
 }();
 

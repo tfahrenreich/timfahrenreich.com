@@ -1,4 +1,4 @@
 <?php
 include_once('../libs/setup.php');
 
-$smarty->display('./templates/'.$_GET["p"].'.tpl');
+$smarty->display('../templates/projects/'.$_GET["p"].'.tpl');

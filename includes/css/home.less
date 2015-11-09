@@ -44,12 +44,19 @@ html.home{
       ul.project-list{
         margin: 0 auto;
         padding: 0 10px;
-        width: 1040px;
+        width: 100%;
+        max-width: 1040px;
         li{
           padding: 10px;
           float: left;
           display: inline-block;
           width: 500px;
+          @media (max-width: 1040px){
+            width: 50%;
+          }
+          @media (max-width: 640px){
+            width: 100%;
+          }
           .inner{
             background: red;
             img{
@@ -59,13 +66,40 @@ html.home{
         }
       }
       #project-viewer{
+        z-index: 1;
         position: absolute;
         left: 105%;
         top: 0;
         width: 100%;
         min-height: 100%;
-        background-color: blue;
+        background-color: #ffffff;
+        &:before{
+          content: '';
+          display: table;
+        }
+        &:after{
+          content: '';
+          clear: both;
+          display: table;
+        }
+        .header-area{
+          max-width: 1040px;
+          margin: 0 auto;
+          padding: 0 20px;
+          h2.project-title{
+            font-size: 2.2rem;
+            font-weight: 100;
+            margin: 0;
+          }
+          .column{
+            float: left;
+            width: 50%;
+          }
+        }
       }
+    }
+    #contact{
+      background-color: #0095FF;
     }
   }
 }
