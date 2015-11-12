@@ -2,7 +2,8 @@
     "projects": [
       {
         "name": "Luxury Link",
-        "templateUrl": "luxurylink"
+        "templateUrl": "luxurylink",
+        "size": "third"
       },
       {
         "name": "HistoryNet",
@@ -14,11 +15,13 @@
       },
       {
         "name": "Glitterrings",
-        "templateUrl": "glitterrings"
+        "templateUrl": "glitterrings",
+        "size": "third"
       },
       {
         "name": "Cant't Relate",
-        "templateUrl": "cantrelate"
+        "templateUrl": "cantrelate",
+        "size": "third"
       }
     ],
     "experiments": [
