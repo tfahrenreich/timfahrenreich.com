@@ -3,24 +3,29 @@
       {
         "name": "Luxury Link",
         "templateUrl": "luxurylink",
+        "bgpos": "-215px",
         "size": "third"
       },
       {
         "name": "HistoryNet",
-        "templateUrl": "historynet"
+        "templateUrl": "historynet",
+        "bgpos": "-105px"
       },
       {
         "name": "LivnGiv",
-        "templateUrl": "livngiv"
+        "templateUrl": "livngiv",
+        "bgpos": "10px"
       },
       {
         "name": "Glitterrings",
         "templateUrl": "glitterrings",
+        "bgpos": "-340px",
         "size": "third"
       },
       {
         "name": "Cant't Relate",
         "templateUrl": "cantrelate",
+        "bgpos": "-500px",
         "size": "third"
       }
     ],
@@ -28,3 +33,4 @@
 
    ]
   }]
+
