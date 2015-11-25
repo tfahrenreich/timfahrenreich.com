@@ -7,7 +7,7 @@ html.home{
     #home-slide{
       background-color: #008080;
       h1{
-        font-size: 4vw;
+        font-size: 3.5vw;
         position: absolute;
         display: block;
         margin: 0;
@@ -20,8 +20,15 @@ html.home{
         -ms-transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         color: #008080;
+        @media (max-width: 1040px){
+          font-size: 6vw;
+        }
+        @media (max-width: 640px){
+          font-size: 7.5vw;
+        }
         small{
           display: block;
+          font-size: 60%;
         }
         .black-text{
           color: red;
