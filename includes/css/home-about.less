@@ -1,0 +1,80 @@
+#about{
+  .section-header{
+    color: @mute;
+  }
+  background-color: #ffffff;
+  .photo{
+    .image{
+      float: right;
+      margin-left: 50px;
+      display: inline-block;
+      border-radius: 1000px;
+      height: 300px;
+      width: 300px;
+      background-color: @main;
+      vertical-align: middle;
+      position: relative;
+    }
+  }
+  .intro{
+    margin-bottom: 50px;
+    h3{
+      font-size: 3.3rem;
+      line-height: 1.2;
+      margin: 0;
+      color: @main;
+    }
+  }
+  .skills{
+    h4{
+      vertical-align: middle;
+      font-size: 1.6rem;
+      font-weight: 100;
+      margin: 0;
+    }
+    h5{
+      display: inline-block;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 100;
+      color: @mute;
+    }
+    .design,
+    .tech{
+      width: 50%;
+      float: left;
+      .icon-cont{
+        .icon{
+          display: inline-block;
+          border-radius: 1000px;
+          height: 75px;
+          width: 75px;
+          background-color: @main;
+          vertical-align: middle;
+          margin-right: 1rem;
+          position: relative;
+          &::after{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            content: '';
+            background-image: url('/includes/i/randoicons.png');
+            background-repeat: no-repeat;
+            transform: scale(0.2);
+            top: 50%;
+            left: 50%;
+            margin-left: -125px;
+            margin-top: -125px;
+          }
+        }
+      }
+    }
+    .tech .icon::after{
+      background-position: 11px 19px;
+    }
+    .design .icon::after{
+      background-position: -313px 19px;
+    }
+  }
+}

@@ -151,6 +151,58 @@
             }(0);
         });
     }(_T._data.windowHeight, $('#home-slide'), $('body'));
+    //Debris
+    !function(d){
+        var i;
+        //write 15 random animations
+        $('head').append("<style id='anima'></style>");
+        for(i = 1; i<=15; i++){
+            var r = function(){
+                var plusOrMinus = Math.random() < 0.5 ? '-':'';
+                return plusOrMinus+Math.round((Math.random() * (50 - 20) + 10))+"%"
+            };
+            var o = function(){
+                return Math.round(Math.random()*10)/10
+            };
+            var d = function(){
+                var plusOrMinus = Math.random() < 0.5 ? '-':'';
+                return plusOrMinus+Math.round((Math.random() * (45 - 360) + 360))+"deg"
+            };
+            var css = "@-webkit-keyframes Floating"+[i]+"{" +
+                " 0% {opacity: 0; margin: 0 0 0 0; transform: rotate("+d()+")}" +
+                " 25% {opacity: "+o()+"; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+")}" +
+                " 50% {opacity: "+o()+"; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+"))}" +
+                " 100% {opacity: 0; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+")}}" +
+                "@-moz-keyframes Floating"+[i]+"{" +
+                " 0% {opacity: 0; margin: 0 0 0 0; transform: rotate("+d()+")}" +
+                " 25% {opacity: "+o()+"; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+")}" +
+                " 50% {opacity: "+o()+"; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+"))}" +
+                " 100% {opacity: 0; margin: "+r()+" "+r()+" "+r()+" "+r()+"; transform: rotate("+d()+")}}";
+            $('#anima').append(css);
+        }
+
+        //creates 15 specs and appends them to container
+        $('section').find('.debris').each(function(){
+            for (i = 1; i<=15; i++){
+                var debris = ('<i></i>');
+                var animationTime = function () {
+                    return Math.round((Math.random() * (80 - 30) + 30) * 10) / 10+ 's';
+                };
+                var size = Math.round((Math.random() * (60 - 10) + 10) * 10) / 10+'px';
+                css = {
+                    "top"                                   :   Math.floor(Math.random()* 100) + "%",
+                    "left"                                  :   Math.floor(Math.random()* 100) + "%",
+                    "width"                                 :   size,
+                    "height"                                :   size,
+                    "-webkit-animation-name"                :   "Floating"+[i],
+                    "-webkit-animation-duration"            :   animationTime(),
+                    "-moz-animation-name"                   :   "Floating"+[i],
+                    "-moz-animation-duration"               :   animationTime()
+                };
+                $(debris).css(css).appendTo(this);
+            }
+        })
+    }();
 
     //project display
     window.projectDisplay = function(event,t){
