@@ -105,7 +105,7 @@
                 return colors[Math.round(Math.random() * (9 - 1) + 1)];
             };
             animationTime = function () {
-                return Math.round((Math.random() * (6 - 3) + 3) * 10) / 10+ 's ease color';
+                return Math.round((Math.random() * (5 - 3) + 3) * 10) / 10+ 's ease color';
             };
 
             $('.letter-container').each(function () {
@@ -147,7 +147,7 @@
                     }
                     i++;
                     animationLoop(i)
-                }, 2000);
+                }, 4000);
             }(0);
         });
     }(_T._data.windowHeight, $('#home-slide'), $('body'));

@@ -23,7 +23,7 @@
         <div class="tech">
             <div class="icon-cont">
                 <div class="icon"></div>
-                <h5>Tech</h5>
+                <h5>Development</h5>
             </div>
             <p><strong>Emphasis:</strong></p>
             <ul>
@@ -41,8 +41,6 @@
                 <li>PHP</li>
                 <li>Smarty PHP</li>
                 <li>CSS (LESS/SASS)</li>
-
-
             </ul>
         </div>
         <div class="design">
