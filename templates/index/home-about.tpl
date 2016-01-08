@@ -7,16 +7,16 @@
     </div>
     <div class="intro">
         <h3>Hey,</h3>
-        <p>I’m a Front-End Developer who lives and breathes HTML/CSS and Javascript. I create beautiful, simple and effective designs for web and mobile applications from soup to nuts.
-            I work alongside developers, copywriters, and product owners to create elegant user experiences; I should thrive on feedback, critique and iteration.
+        <p> I'm a creative front end developer with 5 years experience, currently based in <strong>Los Angeles, CA.</strong></p>
 
-            I'm strongly focused on modularity and maintainability and I pay great attention to details.
+        <p> I create beautiful, simple and effective designs for web and mobile applications from conception to implementation.
+            I work alongside other developers, copywriters, and product owners to create elegant user experiences.</p>
 
-            I have over 6 years of experience looking to create challenging and innovative web products.
+        <p> Hardened interaction geek, I love to create, improve & iterate products to greatness. My priority is always to remove the friction between the users and the apps I create.</p>
 
+        <p> I concentrate on modularity and maintainability and I pay great attention to details.</p>
 
-            My design background, along with my experience as a developer allows me to take care of a project from concept and design, through to execution and delivery.
-        </p>
+        <p> My design background, along with my experience as a developer allows me to take care of a project from concept and design, through to execution and delivery.</p>
     </div>
     <div class="skills">
         <h4>Skills and Techniques</h4>

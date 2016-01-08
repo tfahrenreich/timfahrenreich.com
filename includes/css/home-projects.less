@@ -142,10 +142,21 @@
         font-size: 2.2rem;
         font-weight: 100;
         margin: 0;
+        padding-right: 20px;
       }
-      .column{
+      .column1-3{
         float: left;
-        width: 50%;
+        width: 33.333%;
+      }
+      .column2-3{
+        float: left;
+        width: 66.666%;
+      }
+      @media (max-width: 640px){
+        .column1-3,
+        .column2-3{
+          width: 100%;
+        }
       }
     }
   }
