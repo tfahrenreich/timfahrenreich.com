@@ -206,6 +206,7 @@
 
     //project display
     window.projectDisplay = function(event,t){
+        $('#third').find('span.debris').fadeOut(1000);
         console.log(t);
         var p = $('#project-viewer');
         var pd = $('#third').find('.panel-display');
@@ -222,6 +223,7 @@
             }
         });
         p.find('.back').bind('click', function(){
+            $('#third').find('span.debris').fadeIn(10);
             p.css('position' , 'absolute');
             p.animate({'left' : '105%'});
             pd.slideDown();
