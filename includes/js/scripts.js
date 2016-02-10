@@ -216,7 +216,7 @@
         }).css('background-color', color);
         pd.slideUp();
         $.ajax({
-            url: "http://10.20.30.40/projects/?p="+t,
+            url: "/projects/?p="+t,
             dataType: "html",
             success: function(data){
                 $('#project-viewer-inner').html(data);
