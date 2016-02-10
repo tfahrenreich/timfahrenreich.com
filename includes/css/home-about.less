@@ -40,6 +40,15 @@
       font-weight: 100;
       color: @mute;
     }
+    &:before{
+      content: '';
+      display: table;
+    }
+    &:after{
+      content: '';
+      clear: both;
+      display: table;
+    }
     .design,
     .tech{
       width: 50%;
@@ -68,6 +77,15 @@
             margin-top: -125px;
           }
         }
+      }
+      &:before{
+        content: '';
+        display: table;
+      }
+      &:after{
+        content: '';
+        clear: both;
+        display: table;
       }
     }
     .tech .icon::after{

@@ -4,29 +4,34 @@
         "name": "Luxury Link",
         "templateUrl": "luxurylink",
         "bgpos": "-215px",
-        "size": "third"
+        "size": "third",
+        "color": "#81124B"
       },
       {
         "name": "HistoryNet",
         "templateUrl": "historynet",
-        "bgpos": "-105px"
+        "bgpos": "-105px",
+        "color": "#32373B"
       },
       {
         "name": "LivnGiv",
         "templateUrl": "livngiv",
-        "bgpos": "10px"
+        "bgpos": "10px",
+        "color": "#146381"
       },
       {
         "name": "Glitterrings",
         "templateUrl": "glitterrings",
         "bgpos": "-340px",
-        "size": "third"
+        "size": "third",
+        "color": "#2D9EB8"
       },
       {
         "name": "Cant't Relate",
         "templateUrl": "cantrelate",
         "bgpos": "-500px",
-        "size": "third"
+        "size": "third",
+        "color": "#000000"
       }
     ],
     "experiments": [

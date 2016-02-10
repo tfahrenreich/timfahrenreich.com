@@ -1,5 +1,5 @@
 <li class="{$proj.size}">
-    <a class="inner" data-href="{$proj.templateUrl}" onclick="projectDisplay(event,'{$proj.templateUrl}');">
+    <a class="inner" data-href="{$proj.templateUrl}" onclick="projectDisplay(event,'{$proj.templateUrl}', '{$proj.color}');">
         <div class="info">
             <div class="background"></div>
             <i style="background-position: center {$proj.bgpos}"></i>

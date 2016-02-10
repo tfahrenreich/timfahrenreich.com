@@ -205,7 +205,7 @@
     }();
 
     //project display
-    window.projectDisplay = function(event,t){
+    window.projectDisplay = function(event,t,color){
         $('#third').find('span.debris').fadeOut(1000);
         console.log(t);
         var p = $('#project-viewer');
@@ -213,7 +213,7 @@
         event.preventDefault();
         p.animate({'left' : '0%'}, function(){
             p.css('position' , 'static');
-        });
+        }).css('background-color', color);
         pd.slideUp();
         $.ajax({
             url: "http://10.20.30.40/projects/?p="+t,

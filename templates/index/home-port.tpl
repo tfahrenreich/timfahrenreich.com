@@ -6,10 +6,10 @@
 <div class="panel-display">
     <div class="container">
         <h2 class="section-header">Projects</h2>
+        <ul class="project-list">
+            {foreach $work[0].projects as $proj}
+                {include file='partials/project.tpl'}
+            {/foreach}
+        </ul>
     </div>
-    <ul class="project-list">
-        {foreach $work[0].projects as $proj}
-            {include file='partials/project.tpl'}
-        {/foreach}
-    </ul>
 </div>

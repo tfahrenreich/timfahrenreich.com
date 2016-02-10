@@ -7,3 +7,11 @@
         <p>Nullam interdum est eget massa fermentum, nec porttitor felis volutpat. Mauris ut lacus in nulla auctor tristique vitae id tellus. Fusce sed vestibulum ante. Proin nibh ex, cursus et leo quis, rutrum blandit nunc. Ut lacinia ipsum at rhoncus pharetra. Donec efficitur dictum purus gravida venenatis. Morbi facilisis metus vitae mi pulvinar, at laoreet est bibendum. Nulla auctor massa quis convallis vulputate. Morbi euismod blandit maximus.</p>
     </div>
 </div>
+<div class="screenshot-container">
+    <img class="desk" src="/includes/i/projects/historynet/desktop1.jpg">
+    <img class="phone" src="/includes/i/projects/historynet/mobile1.jpg">
+</div>
+<div class="screenshot-container">
+    <img class="desk" src="/includes/i/projects/historynet/desktop2.jpg">
+    <img class="phone" src="/includes/i/projects/historynet/mobile2.jpg">
+</div>
