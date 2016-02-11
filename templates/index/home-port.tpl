@@ -1,7 +1,13 @@
 <span class="debris"></span>
 <div id="project-viewer">
-    <div class="back">< back to projects</div>
-    <div id="project-viewer-inner"></div>
+    <div class="container">
+        <div id="project-viewer-inner"></div>
+        <div class="bottom">
+            <a class="back button">
+                <span>back</span>
+            </a>
+        </div>
+    </div>
 </div>
 <div class="panel-display">
     <div class="container">

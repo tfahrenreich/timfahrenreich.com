@@ -8,10 +8,12 @@
     </div>
 </div>
 <div class="screenshot-container">
-    <img class="desk" src="/includes/i/projects/glitterrings/desktop1.jpg">
-    <img class="phone" src="/includes/i/projects/glitterrings/mobile1.jpg">
-</div>
-<div class="screenshot-container">
-    <img class="desk" src="/includes/i/projects/glitterrings/desktop2.jpg">
-    <img class="phone" src="/includes/i/projects/glitterrings/mobile2.jpg">
+    <div class="screenshot">
+        <img class="desk" src="/includes/i/projects/glitterrings/desktop1.jpg">
+        <img class="phone" src="/includes/i/projects/glitterrings/mobile1.jpg">
+    </div>
+    <div class="screenshot">
+        <img class="desk" src="/includes/i/projects/glitterrings/desktop2.jpg">
+        <img class="phone" src="/includes/i/projects/glitterrings/mobile2.jpg">
+    </div>
 </div>

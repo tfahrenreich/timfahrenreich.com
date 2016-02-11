@@ -56,9 +56,9 @@
             menu: function (n) {
                 n = $('nav');
                 if($('body').scrollTop()>(_T._data.windowHeight-n.outerHeight())){
-                    n.css('background', '#008080')
+                    n.addClass('opaque')
                 }else{
-                    n.css('background', '')
+                    n.removeClass('opaque')
                 }
             },
             seizure: function () {
@@ -223,10 +223,12 @@
             }
         });
         p.find('.back').bind('click', function(){
-            $('#third').find('span.debris').fadeIn(10);
-            p.css('position' , 'absolute');
-            p.animate({'left' : '105%'});
-            pd.slideDown();
+            $('html, body').animate({scrollTop: p.offset().top-80}, 200 , function(){
+                $('#third').find('span.debris').fadeIn(10);
+                p.css('position' , 'absolute');
+                p.animate({'left' : '105%'});
+                pd.slideDown();
+            });
             $(this).unbind();
         });
         $('html, body').animate({scrollTop: p.offset().top-80},500);

@@ -15,6 +15,14 @@
       vertical-align: middle;
       position: relative;
     }
+    @media (max-width: 640px){
+      width: 100%;
+      .image{
+        float: none;
+        margin: auto auto;
+        display: block;
+      }
+    }
   }
   .intro{
     margin-bottom: 50px;
@@ -53,6 +61,9 @@
     .tech{
       width: 50%;
       float: left;
+      @media (max-width: 640px){
+        width: 100% !important;
+      }
       .icon-cont{
         .icon{
           display: inline-block;

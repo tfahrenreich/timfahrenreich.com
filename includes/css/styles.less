@@ -28,6 +28,7 @@ nav{
   border-right: 10px white solid;
   z-index: 1;
   padding: 20px 15px;
+  transition: background-color ease .3s;
   div.logo{
     font-weight: 800;
     font-size: 40px;
@@ -42,6 +43,9 @@ nav{
     float: right;
     height: 40px;
     width: 34px;
+  }
+  &.opaque{
+    background-color: @main;
   }
 }
 
@@ -97,6 +101,56 @@ section{
     position: absolute;
     &:nth-child(odd){
       border-radius: 1000%;
+    }
+  }
+}
+
+a.button{
+  display: inline-block;
+  padding: 0 0.66667rem;
+  width: auto;
+  transition: .7s;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: #006A80;
+  cursor: pointer;
+  margin: auto 0;
+  span{
+    font-size: 1.4rem;
+    font-weight: 100;
+    padding: 0.33333rem;
+    position: relative;
+    vertical-align: middle;
+    z-index: 0;
+    &::before, &::after{
+      bottom: 5%;
+      content: '';
+      position: absolute;
+      top: 5%;
+      transition: 1s;
+      width: 47%;
+      z-index: -1;
+    }
+    &::before{
+      background: #47C3C3;
+      left: 5%;
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    &::after{
+      background: #71B09F;
+      left: 49%;
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+  }
+  &:hover, &:focus{
+    color: #fff ;
+    span::before, span::after{
+      background: #008080;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
     }
   }
 }
