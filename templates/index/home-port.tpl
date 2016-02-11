@@ -4,7 +4,7 @@
         <div id="project-viewer-inner"></div>
         <div class="bottom">
             <a class="back button">
-                <span>back</span>
+                <span>back to projects</span>
             </a>
         </div>
     </div>
