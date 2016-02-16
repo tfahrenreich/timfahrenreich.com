@@ -61,7 +61,6 @@
                 <li>Adobe Illustrator</li>
                 <li>Corel Draw</li>
             </ul>
-
         </div>
     </div>
 </div>
