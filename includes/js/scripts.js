@@ -233,6 +233,26 @@
         });
         $('html, body').animate({scrollTop: p.offset().top-80},500);
     };
+    !function(form, submit){
+
+        submit.on('click', function(){
+            $.ajax({
+                url:"/email.php",
+                method: "POST",
+                data : {
+                    name : "tim",
+                    company_name: "company",
+                    email: "email@email.com",
+                    comments: "comments",
+                    time: "tim"
+                },
+                success : function(data){
+                    console.log(data)
+                }
+            })
+        })
+
+    }($('#contact-form'),$('#form-submit'))
 }();
 
 

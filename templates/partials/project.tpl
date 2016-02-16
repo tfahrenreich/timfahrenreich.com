@@ -1,4 +1,4 @@
-<li class="{$proj.size}">
+<li class="{$proj.size|default:""}">
     <a class="inner" data-href="{$proj.templateUrl}" onclick="projectDisplay(event,'{$proj.templateUrl}', '{$proj.color}');">
         <div class="info">
             <div class="background"></div>

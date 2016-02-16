@@ -8,7 +8,7 @@ if($lock !=="tF2015x"){
 }
 
 //Get Projects/Experiments
-$workJson = file_get_contents("http://".$_SERVER[HTTP_HOST]."/projects/project.json");
+$workJson = file_get_contents("http://".$_SERVER['HTTP_HOST']."/projects/project.json");
 $work = json_decode($workJson, true);
 $smarty->assign("work", $work);
 
