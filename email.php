@@ -16,9 +16,13 @@ if(isset($_POST['email'])) {
     $email_message .= "First Name: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
-    $headers = 'From: '.$email_from."\r\n".
-        'Reply-To: '.$email_from."\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+
+    $headers = 'From: Tim <hi@timf.xyz>' . "\r\n" ;
+    $headers .='Reply-To: '. $email_from . "\r\n" ;
+    $headers .='X-Mailer: PHP/' . phpversion();
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+
     @mail($email_to, $email_subject, $email_message, $headers);
     echo "success";
     die();
