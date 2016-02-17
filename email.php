@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['email'])) {
-    $email_to = "hi@timf.xyz";
+    $email_to = "tfahrenreich@gmail.com";
     $email_subject = "TIMF.XYZ CONTACT FORM";
 
     // validation expected data exists
