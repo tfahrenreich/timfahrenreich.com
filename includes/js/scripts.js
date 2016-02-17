@@ -274,22 +274,19 @@
                         email: $email.val(),
                         comments: $comments.val()
                     },
-                    success : function(data){
-                      console.log(data)
-                    },
-                    complete : function(data){
+                    timeout: 5000,
+                    complete : function(data, status){
                         $('#sending').fadeOut(function(){
-                            if(data.statusText == "success") {
+                            if(status == "success") {
                                 $('#sent').fadeIn();
                             }else{
                                 $('#retry').fadeIn();
                             }
                         });
-                        console.log(data);
                     },
                     beforeSend: function() {
                         $('#retry').fadeOut();
-                        form.animate({'margin-left': '120%'}, 300);
+                        form.animate({'margin-left': '200%'}, 300);
                         $('#sending').fadeIn();
                     }
                 });
