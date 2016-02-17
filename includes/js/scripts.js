@@ -55,7 +55,7 @@
             },
             menu: function (n) {
                 n = $('nav');
-                if($('body').scrollTop()>(_T._data.windowHeight-n.outerHeight())){
+                if($('body').scrollTop()>(_T._data.windowHeight-n.outerHeight()-100)){
                     n.addClass('opaque')
                 }else{
                     n.removeClass('opaque')
@@ -147,7 +147,7 @@
                     }
                     i++;
                     animationLoop(i)
-                }, 4000);
+                }, 2500);
             }(0);
         });
     }(_T._data.windowHeight, $('#home-slide'), $('body'));
@@ -207,7 +207,6 @@
     //project display
     window.projectDisplay = function(event,t,color){
         $('#third').find('span.debris').fadeOut(1000);
-        console.log(t);
         var p = $('#project-viewer');
         var pd = $('#third').find('.panel-display');
         event.preventDefault();
@@ -236,36 +235,40 @@
 
     //FORM SUBMISSION
     !function(form, submit){
+        var $name = $("#name");
+        var $email = $("#email");
+        var $comments = $("#message");
+
+        $comments.on('focus', function (){
+            $comments.css({"height":"200px"})
+        });
         submit.on('click', function(){
-            var $name = $("#name");
-            var $email = $("#email");
-            var $comments = $("#message");
-            this.error = false;
+            var error = this.error;
+            error = {} || error;
 
             if($name.val().length < 3) {
-                $name.css('border-bottom', '2px red solid');
-                this.error = true;
+                $name.css('border-bottom', '2px #FF8C8C solid');
+                error.name = true;
             }else{
                 $name.css('border-bottom', '');
-                this.error = false;
+                error.name = false;
             }
 
-            if($email.val().indexOf('@') == -1 && $email.val().length < 4) {
-                $email.css('border-bottom', '2px red solid');
-                this.error = true;
+            if(($email.val().indexOf('@') == -1) || $email.val().length < 4) {
+                $email.css('border-bottom', '2px #FF8C8C solid');
+                error.email = true;
             }else{
                 $email.css('border-bottom', '');
-                this.error = false;
+                error.email = false;
             }
             if($comments.val().length < 4) {
-                $comments.css('border-bottom', '2px red solid');
-                this.error = true;
+                $comments.css('border-bottom', '2px #FF8C8C solid');
+                error.comments = true;
             }else{
                 $comments.css('border-bottom', '');
-                this.error = false;
+                error.comments = false;
             }
-
-            if(this.error == false){
+            if(!error.name && !error.comments && !error.email){
                 $.ajax({
                     url:"/email.php",
                     method: "POST",

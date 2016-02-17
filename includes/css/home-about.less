@@ -1,7 +1,4 @@
 #about{
-  .section-header{
-    color: @mute;
-  }
   background-color: #ffffff;
   .photo{
     .image{
@@ -11,9 +8,21 @@
       border-radius: 1000px;
       height: 300px;
       width: 300px;
-      background-color: @main;
       vertical-align: middle;
       position: relative;
+      background: url("/includes/i/me.jpg") center center;
+      overflow: hidden;
+      &::before{
+        content: '';
+        background: rgba(0, 128, 128, 0.30);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        border-radius: 1000px;
+      }
     }
     @media (max-width: 640px){
       width: 100%;

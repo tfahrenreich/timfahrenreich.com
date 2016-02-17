@@ -1,6 +1,12 @@
 <span class="debris"></span>
+<div id="background-image"></div>
 <div class="container">
     <h2 class="section-header">Contact</h2>
+    <div class="contact-info">
+        <h3>Got a really interesting opportunity?
+            <br/>You may contact me by email at <a href="mailto:hello@timf.xyz">hello@timf.xyz</a> or on <a href="https://www.linkedin.com/in/timothy-fahrenreich-48013666" target="_blank">LinkedIn</a>.
+        </h3>
+    </div>
     <div id="form-container">
         <div id="sent" class="center-form">
             <h2><span class="letter-container">Sent!</span></h2>

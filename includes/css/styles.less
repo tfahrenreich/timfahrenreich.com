@@ -8,7 +8,7 @@
 }
 body,html{
   margin: 0;
-  height: 101%;
+  height: 100%;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   color: @body;
@@ -28,7 +28,7 @@ nav{
   border-right: 10px white solid;
   z-index: 1;
   padding: 20px 15px;
-  transition: background-color ease .3s;
+  //transition: background-color ease .3s;
   div.logo{
     font-weight: 800;
     font-size: 40px;
@@ -50,10 +50,9 @@ nav{
 }
 
 section{
-  //todo display: none;
+  display: none;
   overflow: hidden;
   position: relative;
-  margin-bottom: 10px;
   .container{
     max-width: 1040px;
     margin: 0 auto;
@@ -61,11 +60,10 @@ section{
     padding-bottom: 50px;
     h2.section-header{
       position:relative;
-      text-align: center;
       text-transform: uppercase;
       font-weight: 100;
       font-size: 2.2rem;
-      color: #ffffff;
+      color: @mute;
       z-index: 0;
       margin: 4.5rem 0 2rem;
       &:after{
@@ -95,7 +93,7 @@ section{
   .debris i{
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
-    border: 2px #008080 solid;
+    border: 2px @main solid;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     position: absolute;
@@ -104,7 +102,13 @@ section{
     }
   }
 }
-
+a{
+  text-decoration: none;
+  color: @main;
+  &:visited{
+    color: @main;
+  }
+}
 a.button{
   display: inline-block;
   padding: 0 0.66667rem;
@@ -148,7 +152,7 @@ a.button{
   &:hover, &:focus{
     color: #fff ;
     span::before, span::after{
-      background: #008080;
+      background: @main;
       -webkit-transform: translateY(0);
       transform: translateY(0);
     }
