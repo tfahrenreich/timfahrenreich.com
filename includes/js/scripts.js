@@ -233,26 +233,68 @@
         });
         $('html, body').animate({scrollTop: p.offset().top-80},500);
     };
+
+    //FORM SUBMISSION
     !function(form, submit){
-
         submit.on('click', function(){
-            $.ajax({
-                url:"/email.php",
-                method: "POST",
-                data : {
-                    name : "tim",
-                    company_name: "company",
-                    email: "email@email.com",
-                    comments: "comments",
-                    time: "tim"
-                },
-                success : function(data){
-                    console.log(data)
-                }
-            })
-        })
+            var $name = $("#name");
+            var $email = $("#email");
+            var $comments = $("#message");
+            this.error = false;
 
-    }($('#contact-form'),$('#form-submit'))
+            if($name.val().length < 3) {
+                $name.css('border-bottom', '2px red solid');
+                this.error = true;
+            }else{
+                $name.css('border-bottom', '');
+                this.error = false;
+            }
+
+            if($email.val().indexOf('@') == -1 && $email.val().length < 4) {
+                $email.css('border-bottom', '2px red solid');
+                this.error = true;
+            }else{
+                $email.css('border-bottom', '');
+                this.error = false;
+            }
+            if($comments.val().length < 4) {
+                $comments.css('border-bottom', '2px red solid');
+                this.error = true;
+            }else{
+                $comments.css('border-bottom', '');
+                this.error = false;
+            }
+
+            if(this.error == false){
+                $.ajax({
+                    url:"/email.php",
+                    method: "POST",
+                    timeout: 5000,
+                    data : {
+                        name : $name.val(),
+                        email: $email.val(),
+                        comments: $comments.val()
+                    },
+                    complete : function(data){
+                        $('#sending').fadeOut(function(){
+                            if(data.statusText == "success") {
+                                $('#sent').fadeIn();
+                            }else{
+                                $('#retry').fadeIn();
+                            }
+                        });
+                    },
+                    beforeSend: function(){
+                        $('#retry').fadeOut(function(){
+                            form.animate({'margin-left': '120%'}, 300, function(){
+                                $('#sending').fadeIn();
+                            });
+                        });
+                    }
+                })
+            }
+        })
+    }($('#contact-form'),$('#form-submit, #retry-button'))
 }();
 
 
