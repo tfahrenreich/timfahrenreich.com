@@ -269,11 +269,13 @@
                 $.ajax({
                     url:"/email.php",
                     method: "POST",
-                    timeout: 5000,
                     data : {
                         name : $name.val(),
                         email: $email.val(),
                         comments: $comments.val()
+                    },
+                    success : function(data){
+                      console.log(data)
                     },
                     complete : function(data){
                         $('#sending').fadeOut(function(){
@@ -283,15 +285,14 @@
                                 $('#retry').fadeIn();
                             }
                         });
+                        console.log(data);
                     },
-                    beforeSend: function(){
-                        $('#retry').fadeOut(function(){
-                            form.animate({'margin-left': '120%'}, 300, function(){
-                                $('#sending').fadeIn();
-                            });
-                        });
+                    beforeSend: function() {
+                        $('#retry').fadeOut();
+                        form.animate({'margin-left': '120%'}, 300);
+                        $('#sending').fadeIn();
                     }
-                })
+                });
             }
         })
     }($('#contact-form'),$('#form-submit, #retry-button'))
