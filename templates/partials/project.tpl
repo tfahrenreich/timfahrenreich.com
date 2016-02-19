@@ -3,6 +3,10 @@
         <div class="info">
             <div class="background"></div>
             <i style="background-position: center {$proj.bgpos}"></i>
+            <div class="desc">
+                <h4>{$proj.name}</h4>
+                <p>{$proj.description|default:''}</p>
+            </div>
         </div>
         <img src="/includes/i/cover_{$proj.templateUrl}.jpg">
     </a>

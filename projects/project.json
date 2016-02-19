@@ -5,33 +5,38 @@
         "templateUrl": "luxurylink",
         "bgpos": "-215px",
         "size": "third",
-        "color": "#81124B"
+        "color": "#81124B",
+        "description" : "Founded in 1997, Luxury Link is an OTA centered around luxury travel"
       },
       {
         "name": "HistoryNet",
         "templateUrl": "historynet",
         "bgpos": "-105px",
-        "color": "#32373B"
+        "color": "#32373B",
+        "description": "HistoryNet is a web and magazine publication focused on American History"
       },
       {
         "name": "LivnGiv",
         "templateUrl": "livngiv",
         "bgpos": "10px",
-        "color": "#146381"
+        "color": "#146381",
+        "description" : "LivnGiv partnered with local restaurants to sell gift cards that automatically donated to a charitable cause"
       },
       {
         "name": "Glitterrings",
         "templateUrl": "glitterrings",
         "bgpos": "-340px",
         "size": "third",
-        "color": "#2D9EB8"
+        "color": "#2D9EB8",
+        "description": "Glitterrings, Inc. is a high end manufacturer of fine fashion jewelry, working closely with leading industry brands and lines"
       },
       {
-        "name": "Cant't Relate",
+        "name": "Can't Relate",
         "templateUrl": "cantrelate",
         "bgpos": "-500px",
         "size": "third",
-        "color": "#000000"
+        "color": "#000000",
+        "description": "Can’t Relate is an art collective based out of Southern California. For this project, I designed and created a functional website with a  store front from the ground up, including all logos and letterheads"
       }
     ],
     "experiments": [

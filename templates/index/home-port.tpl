@@ -1,6 +1,9 @@
 <span class="debris"></span>
 <div id="project-viewer">
     <div class="container">
+        <div id="loading" class="center-form">
+            <img src="/includes/i/335.gif">
+        </div>
         <div id="project-viewer-inner"></div>
         <div class="bottom">
             <a class="back button">

@@ -39,6 +39,12 @@
         cursor: pointer;
         .info{
           overflow: hidden;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
           .background{
             -webkit-transform: translate(100%);
             -moz-transform: translate(100%);
@@ -52,8 +58,8 @@
             transition: transform 0.5s ease-in-out 0.15s;
             -moz-transition: -moz-transform 0.5s ease-in-out 0.3s;
             -o-transition: -o-transform 0.5s ease-in-out 0.3s;
-            background-color: #000;
-            z-index: 9999;
+            background-color: @main;
+            z-index: 2;
             display: block;
             position: absolute;
             top: 0;
@@ -70,12 +76,34 @@
               content: "";
             }
           }
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          .desc{
+            z-index: 2;
+            position: absolute;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            top:50%;
+            opacity: 0;
+            -webkit-transition: opacity 1s;
+            -moz-transition: opacity 1s;
+            -ms-transition: opacity 1s;
+            -o-transition: opacity 1s;
+            transition: opacity 1s;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            h4{
+              margin: 0 0 .8rem;
+              text-transform: uppercase;
+            }
+            p{
+              margin: 0;
+              font-size: .9rem;
+              padding: 0 .8rem;
+            }
+          }
         }
         i{
           content: "";
@@ -88,7 +116,7 @@
           left: 50%;
           margin-left: -175px;
           margin-top: -50px;
-          z-index: 9998;
+          z-index: 1;
           transform: scale(.7);
         }
         &:hover{
@@ -104,6 +132,9 @@
               -moz-transition: -moz-transform 0.5s ease-in-out 0.15s;
               -o-transition: -o-transform 0.5s ease-in-out 0.15s;
               transition: transform 0.5s ease-in-out 0.15s;
+            }
+            .desc{
+              opacity: 1;
             }
           }
         }
@@ -134,7 +165,8 @@
     top: 0;
     width: 100%;
     min-height: 100%;
-    background-color: #000;
+    background-color: #ffffff;
+    transition: background ease-in .3s;
     color: #fff;
     &:before{
       content: '';
@@ -227,6 +259,9 @@
     }
     .bottom{
       text-align: center;
+    }
+    a.back{
+      display: none;
     }
   }
 }

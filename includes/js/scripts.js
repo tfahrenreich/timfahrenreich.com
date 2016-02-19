@@ -210,23 +210,38 @@
         var p = $('#project-viewer');
         var pd = $('#third').find('.panel-display');
         event.preventDefault();
-        p.animate({'left' : '0%'}, function(){
-            p.css('position' , 'static');
-        }).css('background-color', color);
-        pd.slideUp();
+
         $.ajax({
             url: "/projects/?p="+t,
             dataType: "html",
             success: function(data){
-                $('#project-viewer-inner').html(data);
+                setTimeout(function(){
+                    $("#loading").fadeOut(function(){
+                        p.css('position' , 'static').css('background-color', color);
+                        $('#project-viewer-inner').html(data);
+                        p.find('.back').fadeIn();
+                    });
+                },1000);
+            },
+            beforeSend: function(){
+                pd.slideUp(function(){
+                    p.animate({'left' : '0%'}, function(){
+                        $("#loading").fadeIn();
+                    })
+                });
             }
         });
+
         p.find('.back').bind('click', function(){
             $('html, body').animate({scrollTop: p.offset().top-80}, 200 , function(){
                 $('#third').find('span.debris').fadeIn(10);
                 p.css('position' , 'absolute');
-                p.animate({'left' : '105%'});
+                p.animate({'left' : '105%'}, function(){
+                    p.css('background-color', '#FFF');
+                    $('#project-viewer-inner').html('');
+                });
                 pd.slideDown();
+                p.find('.back').hide();
             });
             $(this).unbind();
         });
