@@ -16,8 +16,6 @@ MM    MM 8M   MM   MM    MM   MM    YM.    ,  MM    MM   MM    YM.    ,  MM YM. 
 <html class="{$page.type|default:''}">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/includes/css/styles.less">
     <script src="/includes/js/vendor/jquery-1.11.1.min.js"></script>
     <title>{$page.title|default:'Tim Fahrenreich'}</title>
