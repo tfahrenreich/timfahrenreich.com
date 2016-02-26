@@ -34,9 +34,9 @@
             minHeight: function () {
                 /**Sets <sections>'s min-height to viewport height for full frame sections*/
                 var $target = $('section[data-resize]');
+                var $windowHeight = _T.helpers.getHeight()-20;
+                _T._data.windowHeight = $windowHeight;
                 if ($target.length > 0) {
-                    var $windowHeight = _T.helpers.getHeight()-20;
-                    _T._data.windowHeight = $windowHeight;
                     $target.css('min-height', $windowHeight + 'px');
                 }
             }
