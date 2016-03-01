@@ -29,6 +29,8 @@ nav{
   border-right: 10px white solid;
   z-index: 1;
   padding: 20px 15px;
+  height: 80px;
+  overflow: hidden;
   //transition: background-color ease .3s;
   div.logo{
     font-weight: 800;
@@ -38,12 +40,23 @@ nav{
     float: left;
     line-height: 1;
   }
-  span.menu{
-    display: inline-block;
-    background: url('/includes/i/glyphicons-114-justify.png') no-repeat center center;
-    float: right;
-    height: 40px;
-    width: 34px;
+  ul{
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    li{
+      font-family: Montserrat, sans-serif;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #25B5B5;
+      line-height: 47px;
+      padding: 0 .8rem;
+      cursor: pointer;
+      transition: color ease .3s ;
+      &:hover{
+        color: #ffffff;
+      }
+    }
   }
   &.opaque{
     background-color: @main;

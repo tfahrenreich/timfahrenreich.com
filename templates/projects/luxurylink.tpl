@@ -1,10 +1,30 @@
 <div class="header-area">
     <div class="column1-3">
         <h2 class="project-title">Luxury Link</h2>
+        <h4>Technologies</h4>
+        <ul>
+            <li>PHP</li>
+            <li>Smarty</li>
+            <li>Foundation</li>
+            <li>Ajax</li>
+            <li>LESS CSS</li>
+        </ul>
     </div>
     <div class="column2-3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus sed purus vitae luctus. Suspendisse potenti. In vitae vestibulum ipsum. Morbi porta luctus eros eget eleifend. Nulla laoreet orci nibh, et pharetra dolor tincidunt nec. Curabitur ut odio id tellus efficitur sodales. Sed vel erat ut nibh sagittis posuere. In lacus quam, convallis quis nunc tristique, ornare efficitur eros. Donec porttitor, risus at rutrum volutpat, arcu purus volutpat erat, nec tempor mauris nibh nec lorem. Curabitur semper eros vel elit condimentum vestibulum. Sed feugiat diam vitae arcu dignissim auctor. Fusce vel ex sit amet lorem consectetur volutpat nec ac mauris. Proin sapien dui, iaculis ac tincidunt blandit, consectetur nec nibh. Duis ac magna non lectus hendrerit ultrices.</p>
-        <p>Nullam interdum est eget massa fermentum, nec porttitor felis volutpat. Mauris ut lacus in nulla auctor tristique vitae id tellus. Fusce sed vestibulum ante. Proin nibh ex, cursus et leo quis, rutrum blandit nunc. Ut lacinia ipsum at rhoncus pharetra. Donec efficitur dictum purus gravida venenatis. Morbi facilisis metus vitae mi pulvinar, at laoreet est bibendum. Nulla auctor massa quis convallis vulputate. Morbi euismod blandit maximus.</p>
+        <p>Luxury Link is an OTA that curates luxury travel experiences.</p>
+        <p>During my time time at LL our main objective was to modernize our website, which was mostly unchanged since the early 2000s.
+            Our main concerns migrating to a responsive framework and cleaning up our dated codebase.</p>
+        <ul>
+            <li>Refactoring and centralizing the legacy codebase into legible and reusable modules that are useful to other/future
+                members of the team.</li>
+            <li>Created a responsive framework to function alongside the legacy framework to allow for a graceful transition to a fully
+                responsive purchasing funnel.</li>
+            <li>Worked closely with creative team to flesh out UI and UX while keeping any overly ambitious projects within the
+                realms our of capabilities and projects time constraints.</li>
+            <li>Set standards for our browser compatibility for mobile and desktop browsers.</li>
+            <li>Implemented multiple 3rd party tags to increase analytics and improve overall conversion rates.</li>
+            <li>Optimized CDN.</li>
+        </ul>
     </div>
 </div>
 <div class="screenshot-container">

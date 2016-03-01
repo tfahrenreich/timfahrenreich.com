@@ -90,6 +90,16 @@
 !function () {
     Tfahrenreich.init();
 
+    //Nav bindings
+    !function(){
+        $('nav ul').find('li').on('click', function(){
+            var anchor = $("#"+$(this).data('anchor'));
+            $('html, body').animate({scrollTop: anchor.offset().top-80},500);
+
+        })
+
+    }();
+
     //Intro Animation
     !function(h,f,b){
         f.css('height',h+20);
