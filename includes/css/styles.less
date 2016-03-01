@@ -53,9 +53,14 @@ nav{
       padding: 0 .8rem;
       cursor: pointer;
       transition: color ease .3s ;
+      @media (max-width: 640px) {
+        font-size: .8rem;
+        padding: 0 2px;
+      }
       &:hover{
         color: #ffffff;
       }
+
     }
   }
   &.opaque{
