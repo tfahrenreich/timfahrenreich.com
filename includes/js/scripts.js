@@ -152,7 +152,7 @@
                     });
                     if(i == 0){
                         $('section').slideDown();
-                        $('nav').slideDown();
+                        $('nav').slideDown(1300);
                         f.find('p').slideDown(1000);
                     }
                     i++;
