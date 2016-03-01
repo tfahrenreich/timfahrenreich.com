@@ -33,10 +33,12 @@
             <ul>
                 <li>Git</li>
                 <li>Javascript</li>
+                <li>Node</li>
+                <li>Angular</li>
                 <li>jQuery</li>
                 <li>HTML5</li>
                 <li>PHP</li>
-                <li>Smarty PHP</li>
+                <li>Smarty</li>
                 <li>CSS (LESS/SASS)</li>
             </ul>
         </div>
