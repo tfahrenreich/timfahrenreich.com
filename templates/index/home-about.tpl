@@ -13,6 +13,8 @@
         <p> Hardened interaction geek, I love to create, improve & iterate products to greatness. My priority is always to remove the friction between the users and the apps I work on.</p>
 
         <p> I concentrate on modularity and maintainability and I pay great attention to details. My design background, along with my experience as a developer allows me to take care of a project from start to finish.</p>
+
+        <p>For my next role I'm looking for a position where I can continue to expand upon my knowledge of Node (and other server-side services) while continuing to improve and maintain any existing front end infrastructure.</p>
     </div>
     <div class="skills">
         <h4>Skills and Emphasis</h4>
