@@ -5,6 +5,7 @@
     <div class="contact-info">
         <h3>Got a really interesting opportunity?
             <br/>You may contact me by email at <a href="mailto:hello@timf.xyz">hello@timf.xyz</a> or on <a href="https://www.linkedin.com/in/timothy-fahrenreich-48013666" target="_blank">LinkedIn</a>.
+            <br/>Check me out on <a href="https://github.com/tfahrenreich">GitHub!</a>
         </h3>
     </div>
     <div id="form-container">
