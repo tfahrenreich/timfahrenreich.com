@@ -6,4 +6,3 @@ templates/templates_c/*
 */includes/css/home.less.cache
 /dist/
 /node_modules/
-!/node_modules/
