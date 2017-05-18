@@ -5,3 +5,5 @@ templates/templates_c/*
 *.cache
 */includes/css/home.less.cache
 /dist/
+/node_modules/
+!/node_modules/

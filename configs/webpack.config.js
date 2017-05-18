@@ -4,7 +4,6 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: {
-        styles: './src/styles/index.less',
         bundle: "./src/index.tsx"
     },
     output: {
@@ -14,7 +13,7 @@ module.exports = {
     devtool: "source-map",
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".less"]
     },
     module: {
         loaders: [

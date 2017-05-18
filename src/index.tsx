@@ -1,5 +1,13 @@
-/**
- * Created by timfahrenreich on 4/5/17.
- */
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {Provider} from "react-redux";
 
-console.log("yooo")
+import router from "./router";
+import store from "./store";
+
+import "./styles/";
+
+ReactDOM.render(
+    <Provider store={store}>{router}</Provider>,
+    document.getElementById("root"),
+);
